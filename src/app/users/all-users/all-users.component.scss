@@ -1,7 +1,20 @@
+@import "../../../sass/variables";
+
 .table-container {
   width: 100%;
   height: auto;
   min-height: 90vh;
-  background: darkkhaki;
   padding: 2%;
+
+  &__button {
+    text-decoration: none;
+  }
+
+  &__title {
+    margin: 20px 0;
+    font-family: $roboto;
+    font-weight: 600;
+    font-size: clamp(20px, 2vw, 30px);
+    color: $soft-gray;
+  }
 }
