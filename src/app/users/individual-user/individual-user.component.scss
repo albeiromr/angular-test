@@ -1,7 +1,43 @@
+@import "../../../sass/variables";
+
 .user-container {
   width: 100%;
   height: auto;
   min-height: 90vh;
   background: rgb(126, 189, 107);
   padding: 2%;
+
+  &__title {
+    margin: 20px 0;
+    font-family: $roboto;
+    font-weight: 600;
+    font-size: clamp(20px, 2vw, 30px);
+    color: $soft-gray;
+  }
+
+  &__info-container {
+    width: 100%;
+    height: auto;
+  }
+
+  &__info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__info-key {
+    margin: 10px;
+    font-family: $roboto;
+    font-weight: 500;
+    color: #565656;
+  }
+
+  &__info-value {
+    margin: 10px 20px;
+    font-family: $roboto;
+    font-weight: 300;
+  }
+
 }

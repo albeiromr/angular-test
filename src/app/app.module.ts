@@ -4,8 +4,9 @@ import { AppRoutingModule } from './app.routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 //ngprime components
-import {TableModule } from 'primeng/table';
-import {ButtonModule} from 'primeng/button';
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { TabViewModule } from 'primeng/tabview';
 
 import { AppComponent } from './app.component';
 import { IndividualUserComponent } from './users/individual-user/individual-user.component';
@@ -24,7 +25,8 @@ import { AllUsersComponent } from './users/all-users/all-users.component';
     AppRoutingModule,
     HttpClientModule,
     TableModule,
-    ButtonModule
+    ButtonModule,
+    TabViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,7 @@ import { IUser } from '../interfaces/user.interface';
   templateUrl: './all-users.component.html',
   styleUrls: ['./all-users.component.scss']
 })
+
 export class AllUsersComponent implements OnInit {
 
   usuarios:IUser[] = []
