@@ -6,6 +6,17 @@
   min-height: 90vh;
   padding: 2%;
 
+  &__title-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    height: 80%;
+  }
+
   &__title {
     margin: 20px 0;
     font-family: $roboto;
