@@ -40,7 +40,10 @@ export class AppService {
     this._usuarioSeleccionado = usuario;
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    const usuarioLocalStorage: string  = localStorage.getItem("usuarioSeleccionado") || "";
+    if(usuarioLocalStorage !== "") this._usuarioSeleccionado = JSON.parse(usuarioLocalStorage);
+  }
 
   getsUsuarios(): Observable<IUser[]> {
     return this.http.get<IUser[]>('https://jsonplaceholder.typicode.com/users');

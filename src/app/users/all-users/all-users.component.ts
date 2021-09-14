@@ -21,6 +21,7 @@ export class AllUsersComponent implements OnInit {
 
   filtrarUsuario(usuario: IUser){
     this.appService.setUsuarioSeleccionado = usuario;
+    localStorage.setItem("usuarioSeleccionado", JSON.stringify(usuario));
   }
 
 }

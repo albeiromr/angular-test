@@ -4,7 +4,7 @@
   width: clamp(320px, 100%, 1600px);
   height: auto;
   min-height: 100vh;
-  background: rgb(240, 240, 240);
+  background: rgb(224, 224, 224);
   margin: 0 auto;
 
   &__header {
@@ -20,7 +20,7 @@
     margin: 0;
     padding: 0;
     font-size: clamp(22px, 3vw, 35px);
-    color: #565656;
+    color: $soft-gray;
     font-family: $roboto;
   }
 }
