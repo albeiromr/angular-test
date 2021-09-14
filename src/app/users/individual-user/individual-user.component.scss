@@ -16,12 +16,12 @@
   }
 
   &__info-container {
-    width: 100%;
+    width: clamp(394px, 33.059vw, 443px);
     height: auto;
   }
 
   &__info {
-    width: clamp(350px, 30vw, 500px);
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
