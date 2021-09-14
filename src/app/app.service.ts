@@ -4,14 +4,45 @@ import { Observable } from 'rxjs';
 import { IUser } from './users/interfaces/user.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AppService {
 
-  constructor(private http: HttpClient) {}
+  private _usuarioSeleccionado: IUser = {
+    id: 0,
+    name: '',
+    username: '',
+    email: '',
+    address: {
+      street: '',
+      suite: '',
+      city: '',
+      zipcode: '',
+      geo: {
+        lat: '',
+        lng: '',
+      },
+    },
+    phone: '',
+    website: 'string',
+    company: {
+      name: '',
+      catchPhrase: '',
+      bs: '',
+    },
+  };
 
-  getsUsuarios():Observable<IUser[]>{
-    return this.http.get<IUser[]>("https://jsonplaceholder.typicode.com/users")
+  get getUsuarioSeleccionado():IUser{
+    return this._usuarioSeleccionado;
   }
 
+  set setUsuarioSeleccionado(usuario:IUser){
+    this._usuarioSeleccionado = usuario;
+  }
+
+  constructor(private http: HttpClient) {}
+
+  getsUsuarios(): Observable<IUser[]> {
+    return this.http.get<IUser[]>('https://jsonplaceholder.typicode.com/users');
+  }
 }

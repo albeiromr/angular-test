@@ -17,7 +17,12 @@
                     <td>{{usuario.name}}</td>
                     <td>{{usuario.username | lowercase}}</td>
                     <td>{{usuario.email | lowercase}}</td>
-                    <td><a class="table-container__button" pButton type="button" label="More..." [routerLink]="['/user', usuario.id]" ></a></td>
+                    <td><a 
+                        class="table-container__button" 
+                        pButton type="button" label="More..." 
+                        [routerLink]="['/user', usuario.id]" 
+                        (click)="filtrarUsuario(usuario.id)"
+                        ></a></td>
                 </tr>
             </ng-template>
         </p-table>
