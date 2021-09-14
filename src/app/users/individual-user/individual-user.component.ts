@@ -15,7 +15,7 @@ export class IndividualUserComponent {
   usuarioSeleccionado: IUser;
 
   constructor(private appService: AppService) {
-    this.usuarioSeleccionado = this.appService.getUsuarioSeleccionado
+    this.usuarioSeleccionado = this.appService.getUsuarioSeleccionado;
   }
 
 }

@@ -21,8 +21,9 @@
                         class="table-container__button" 
                         pButton type="button" label="More..." 
                         [routerLink]="['/user', usuario.id]" 
-                        (click)="filtrarUsuario(usuario.id)"
-                        ></a></td>
+                        (click)="filtrarUsuario(usuario)"
+                        >
+                    </a></td>
                 </tr>
             </ng-template>
         </p-table>

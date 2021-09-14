@@ -21,10 +21,11 @@
   }
 
   &__info {
-    width: 100%;
+    width: clamp(350px, 30vw, 500px);
     height: auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__info-key {

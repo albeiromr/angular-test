@@ -19,9 +19,8 @@ export class AllUsersComponent implements OnInit {
       .subscribe((response:IUser[]) => this.usuarios = response)
   }
 
-  filtrarUsuario(idUsuario: number){
-    const usuarioFiltrado = this.usuarios.filter(usuario => usuario.id = idUsuario)[0];
-    this.appService.setUsuarioSeleccionado = usuarioFiltrado;
+  filtrarUsuario(usuario: IUser){
+    this.appService.setUsuarioSeleccionado = usuario;
   }
 
 }
